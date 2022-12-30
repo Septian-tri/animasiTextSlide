@@ -60,7 +60,7 @@ untuk dapat bekerja masukan lebih dari satu / dua class textAnimasi, langkah ber
 
 # Penggunaan animasiTextSlide.js
 
-Jika sudah mengitu tahapan pemasangan di atas, silahkan lihat refrensi pemanggilan fungsi animasiAnimasiTextSlide.js agar dapat bekerja
+Jika sudah mengikuti tahapan pemasangan di atas, silahkan lihat refrensi pemanggilan fungsi animasiAnimasiTextSlide.js agar dapat bekerja
 
 >Sematkan kode di bawah setelah tag &#60;script src="js/animasiTextSlide.js"&#62;&#60;/script&#62;, letakan kode di bawah kedalam tag script baru
 

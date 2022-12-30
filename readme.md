@@ -98,7 +98,7 @@ parameter ulangin di gunakan untuk melakukan perputaran ulang animasi yang mana 
 ### mulaiDari 
 parameter ulangin di gunakan untuk melakukan perubahan arrah scrolling animasi, parameter mulaiDari di dua buah parameter nilai parameter pertama adalah atasKeBawah yang mana nilai atasKeBawah ini jika di gunakan maka scrolling animasi akan di awali dari atas ke bawah, nilai parameter kedua adalah bawahKeAtas yang mana nilai bawahKeAtas ini jika di gunakan maka scrolling animasi akan di awali dari bawah ke atas
 
->Kamu juga dapat menjalankan lebih dari satu class containerAnimasi dengan refrensi setingg di bawah, gunakan paramter animasi untuk menentukan pengaturan masing class containerAnimasi
+>Kamu juga dapat menjalankan lebih dari satu class containerAnimasi dengan refrensi setingg di bawah, gunakan paramter animasi untuk menentukan pengaturan masing-masing class containerAnimasi
 ```js
 animasiTextSlide({
     animasi1 : {

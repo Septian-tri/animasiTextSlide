@@ -1,0 +1,40 @@
+/* *
+ * 
+ * Orginal Created And Design By Septian
+ * V 1.0
+ * septiantriwidian@gmail.com
+ * 
+ * https://github.com/septian-tri/animasiTextSlide
+ * 
+ */
+
+
+/* .containerAnimasi{
+    width: auto;
+    display: block;
+    height: 100px;
+    background: none;
+    background: unset;
+    margin: 25% auto;
+    overflow: hidden;
+    text-align: center;
+    word-break: break-word;
+    border: solid 1px red;
+}
+
+.textAnimasi{
+    padding: 0px 0px;
+    font-family: 'poppins';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 19px;
+    line-height: 23px;
+    display: block;
+    text-align: center;
+    font-weight: bolder;
+    background-color: aqua;
+} */
+
+/* .textAnimasi:nth-child(odd){
+    background: linear-gradient(180deg, rgb(251, 47, 47), rgb(73, 73, 253));
+} */

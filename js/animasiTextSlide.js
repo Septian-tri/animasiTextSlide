@@ -390,6 +390,7 @@ function animasiTextSlide(opsi){
                                         }else{
 
                                             stMt(objSiglAnimasi[0], 0);
+                        
                                             ct(timeoutScrollKeBawah2);
                                             ct(timeOutIdle2);
                                             

@@ -41,7 +41,7 @@ function animasiTextSlide(opsi){
         }
 
         function gmt(obj){
-            return parseInt(obj.style[mt].replace('px', ''))
+            return parseInt(spx(obj.style[mt]));
         }
 
         function ct(val){
@@ -54,6 +54,14 @@ function animasiTextSlide(opsi){
 
         function stMt(obj, val){
             return obj.style[mt] = val + 'px';
+        }
+
+        function gCss(obj, val){
+            return getComputedStyle(obj).getPropertyValue(val).toLocaleLowerCase();
+        }
+
+        function spx(val){
+            return parseInt(val.replace('px', ''));
         }
 
         if(typeof opsi === 'object'){
@@ -72,21 +80,22 @@ function animasiTextSlide(opsi){
                     
                     try{
 
+                        
                         var timeOutIdle;
                         var timeOutIdle2;
                         var timeOutPosisiNormal;
-                        var opsiAnimasi    = opsi['animasi' + (a+1)];
-                        var durasiDiam     = (opsiAnimasi.durasiDiam !== undefined && opsiAnimasi.durasiDiam !== null && typeof opsiAnimasi.durasiDiam === nm) ? opsiAnimasi.durasiDiam : 1; 
-                        var durasiScroll   = (opsiAnimasi.durasiScroll !== undefined && opsiAnimasi.durasiScroll !== null && typeof opsiAnimasi.durasiScroll === nm) ? opsiAnimasi.durasiScroll : 2;
-                        var durasiKembali  = (opsiAnimasi.durasiKembali !== undefined && opsiAnimasi.durasiKembali !== null && typeof opsiAnimasi.durasiKembali === nm) ? opsiAnimasi.durasiKembali : 2;
-                        var calcDurScrKem  = ((totalChCntAnim/durasiKembali) < 0) ? 0 : durasiKembali;
-                        var objSiglAnimasi = objI.getElementsByClassName('textAnimasi');
-                        var tinggiCnt      = getComputedStyle(objI).getPropertyValue('height').toLocaleLowerCase();
-                        var setTinggiCnt   = (tinggiCnt === '0px') ? '14px' : tinggiCnt;
-                        var totalChCntAnim = objSiglAnimasi.length; 
-                        var iterasiA       = 0;
-                        var iterasiB       = 0;
-                        
+                        var opsiAnimasi       = opsi['animasi' + (a+1)];
+                        var durasiDiam        = (opsiAnimasi.durasiDiam !== undefined && opsiAnimasi.durasiDiam !== null && typeof opsiAnimasi.durasiDiam === nm) ? opsiAnimasi.durasiDiam : 1; 
+                        var durasiScroll      = (opsiAnimasi.durasiScroll !== undefined && opsiAnimasi.durasiScroll !== null && typeof opsiAnimasi.durasiScroll === nm) ? opsiAnimasi.durasiScroll : 2;
+                        var durasiKembali     = (opsiAnimasi.durasiKembali !== undefined && opsiAnimasi.durasiKembali !== null && typeof opsiAnimasi.durasiKembali === nm) ? opsiAnimasi.durasiKembali : 2;
+                        var calcDurScrKem     = ((totalChCntAnim/durasiKembali) < 0) ? 0 : durasiKembali;
+                        var objSiglAnimasi    = objI.getElementsByClassName('textAnimasi');
+                        var tinggiCnt         = gCss(objI, 'height');
+                        var setTinggiCnt      = (tinggiCnt === '0px') ? gCss(objI, 'font-size') : tinggiCnt;
+                        var totalChCntAnim    = objSiglAnimasi.length; 
+                        var iterasiA          = 0;
+                        var iterasiB          = 0;
+
                         objI.style.overflowY = 'hidden';
                         objI.style.height    =  setTinggiCnt;
 
@@ -103,9 +112,13 @@ function animasiTextSlide(opsi){
     
                                         rp(itaA1, pt); rp(itaA1, pb); rp(itaA1, mt); 
                                         rp(itaA2, pt); rp(itaA2, pb); rp(itaA2, mt);
-    
-                                        var itaA1Ofhg  = (osh(itaA1)/2);
-                                        var itaA2Ofhg  = (osh(itaA2)/2);
+                                        
+                                        var delPt      = spx(gCss(itaA1, pt));
+                                        var delPb      = spx(gCss(itaA1, pb));
+                                        var delPt1     = spx(gCss(itaA2, pt));
+                                        var delPb1     = spx(gCss(itaA2, pb));
+                                        var itaA1Ofhg  = ((osh(itaA1)-(delPt+delPb))/2);
+                                        var itaA2Ofhg  = ((osh(itaA2)-(delPt1+delPb1))/2);
                                         var objISet1   = (osh(objI)/2);
                                         var padPosisi1 = ((objISet1-itaA1Ofhg) < 0) ? 0 : (objISet1-itaA1Ofhg);
                                         var padPosisi2 = ((objISet1-itaA2Ofhg) < 0) ? 0 : (objISet1-itaA2Ofhg);
@@ -121,12 +134,12 @@ function animasiTextSlide(opsi){
                                         if(iterasiA >= 1 && iterasiA < (totalChCntAnim-1)){ //set ukurn setiap animasi pase 2
     
                                             var itaA3 = objSiglAnimasi[(iterasiA+1)];
-    
-                                            rp(itaA3, pt); 
-                                            rp(itaA3, pb); 
-                                            rp(itaA3, mt); 
-    
-                                            var itaA3Ofhg  = (osh(itaA3)/2);
+
+                                            rp(itaA3, pt); rp(itaA3, pb); rp(itaA3, mt); 
+                                            
+                                            var delPt3     = spx(gCss(itaA3, pt));
+                                            var delPb3     = spx(gCss(itaA3, pb));
+                                            var itaA3Ofhg  = ((osh(itaA3)-(delPb3+delPt3))/2);
                                             var objISet2   = (osh(objI)/2);
                                             var padPosisi3 = ((objISet2-itaA3Ofhg) < 0 ) ? 0 : (objISet2-itaA3Ofhg);
     
@@ -251,34 +264,41 @@ function animasiTextSlide(opsi){
                 
                                         var itaB1     = objSiglAnimasi[iterasiB];
                                         var itaB2     = objSiglAnimasi[(iterasiB+1)];
-                            
+                                        
                                         rp(itaB1, pt); rp(itaB1, pb); rp(itaB1, mt); 
                                         rp(itaB2, pt); rp(itaB2, pb); rp(itaB2, mt);
-                            
-                                        var itaB1Ofhg      = (osh(itaB1)/2);
-                                        var itaB2Ofhg      = (osh(itaB2)/2);
-                                        var objISet2       = (osh(objI)/2);
-                                        var padPosisi4     = ((objISet2-itaB1Ofhg) < 0) ? 0 : (objISet2-itaB1Ofhg);
-                                        var padPosisi5     = ((objISet2-itaB2Ofhg) < 0) ? 0 : (objISet2-itaB2Ofhg);
-                            
+                                        
+                                        var delPt4     = spx(gCss(itaB1, pt));
+                                        var delPb4     = spx(gCss(itaB1, pb));
+                                        var delPt5     = spx(gCss(itaB2, pt));
+                                        var delPb5     = spx(gCss(itaB2, pb));
+                                        var itaB1Ofhg  = ((osh(itaB1)-(delPt4+delPb4))/2);
+                                        var itaB2Ofhg  = ((osh(itaB2)-(delPt5+delPb5))/2);
+                                        var objISet2   = (osh(objI)/2);
+                                        var padPosisi4 = ((objISet2-itaB1Ofhg) < 0) ? 0 : (objISet2-itaB1Ofhg);
+                                        var padPosisi5 = ((objISet2-itaB2Ofhg) < 0) ? 0 : (objISet2-itaB2Ofhg);
+
                                         itaB1.style.cssText = pt + ': '+ padPosisi4 + 'px; '+ pb +': ' + padPosisi4 + 'px;';
                                         itaB2.style.cssText = pt + ': '+ padPosisi5 + 'px; '+ pb +': ' + padPosisi5 + 'px;';
                                         stMt(itaB2, (0-osh(itaB2)));
                                         itaB2.parentNode.insertBefore(itaB2, itaB1);
-
+                                        
                                         iterasiB = 1;
-
                                     }else if( iterasiB >= 2){
                                         
-                                        var objAnim2               = objSiglAnimasi[iterasiB]; 
-                                        var objAnim2Ofhg           = osh(objAnim2);
-                                        var padPosisi6             = (osh(objI)/2)-(objAnim2Ofhg/2);
-                                            
-                                        objAnim2.style.cssText = pt + ': ' + padPosisi6 + 'px; ' + pb + ': ' + padPosisi6 + 'px; ';
-                                        tempPosisiAktual       = (0-osh(objAnim2));
-                                        objAnim2.style[mt]     = tempPosisiAktual + 'px';
+                                        var itaB3 = objSiglAnimasi[iterasiB]; 
                                         
-                                        objI.insertBefore(objAnim2, objSiglAnimasi[0]);
+                                        rp(itaB3, pt); rp(itaB3, pb); rp(itaB3, mt);
+
+                                        var delPt6      = spx(gCss(itaB3, pt));
+                                        var delPb6      = spx(gCss(itaB3, pb));
+                                        var itaB3Ofhg   = ((osh(itaB3)-(delPt6+delPb6))/2);
+                                        var calcPadPos6 = (osh(objI)/2)-(itaB3Ofhg);
+                                        var padPosisi6  = (calcPadPos6 < 0) ? 0 : calcPadPos6;
+
+                                        itaB3.style.cssText = pt + ': ' + padPosisi6 + 'px; ' + pb + ': ' + padPosisi6 + 'px; ';
+                                        stMt(itaB3, 0-osh(itaB3))
+                                        objI.insertBefore(itaB3, objSiglAnimasi[0]);
                                             
                                         iterasiB++;
                                     }
@@ -369,8 +389,7 @@ function animasiTextSlide(opsi){
                                             }, durasiScroll);
                                         
                                         }else{
-
-                                            stMt(objSiglAnimasi[0], 0);
+                                            
                                             ct(timeoutScrollKeBawah2);
                                             ct(timeOutIdle2);
                                             
@@ -422,6 +441,7 @@ function animasiTextSlide(opsi){
             }
 
         }
+
     }
 
 }

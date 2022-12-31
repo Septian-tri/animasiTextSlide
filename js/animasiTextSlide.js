@@ -74,13 +74,14 @@ function animasiTextSlide(opsi){
             var nm             = 'number';
             var totalCntAnim   = objCntAnim.length;
 
+            document.body.style.cssText = "overflow-anchor:auto;";
+
             for(var a = 0; a < totalCntAnim; a++){
                 
                 var sglCntAnim = (function sglCntAnimF(objI){
                     
                     try{
 
-                        
                         var timeOutIdle;
                         var timeOutIdle2;
                         var timeOutPosisiNormal;
@@ -96,8 +97,7 @@ function animasiTextSlide(opsi){
                         var iterasiA          = 0;
                         var iterasiB          = 0;
 
-                        objI.style.overflowY = 'hidden';
-                        objI.style.height    =  setTinggiCnt;
+                        objI.style.cssText = 'overflow-y: hidden !important; height: ' + setTinggiCnt + ' !important; overflow-anchor: auto !important;';
 
                         if(opsiAnimasi.mulaiDari === 'bawahKeAtas'){
 

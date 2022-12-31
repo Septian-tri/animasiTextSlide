@@ -47,6 +47,9 @@ body {
     color: #ff008f;
 }
 
+/**
+    Styling Cnt 4
+*/
 
 .cnt5{
     height: 250px;
@@ -81,6 +84,73 @@ body {
     background-image: url('../images/exampleImageBg4.jpg');
 }
 
+/**
+    Styling Cnt 4
+*/
+
+
+
+/**
+    Styling Cnt 6
+*/
+
+.cnt6{
+    width: auto;
+    display: block;
+    height: 50px;
+    background: none;
+    background: unset;
+    margin: 5px auto;
+    text-align: center;
+    word-break: break-word;
+}
+
+.textAnimasiWarna1{
+    background: linear-gradient(135deg, #FFF6B7 0%, #F6416C 100%);
+}
+
+.textAnimasiWarna2{
+    background: linear-gradient(135deg, #ABDCFF 0%, #0396FF 100%);
+}
+
+.textAnimasiWarna3{
+    background: linear-gradient(135deg, #FFF3B0 0%, #CA26FF 100%);
+}
+
+.textAnimasiWarna4{
+    background: linear-gradient(135deg, #FFF3B0 0%, #CA26FF 100%);
+}
+
+.textAnimasiWarna5{
+    background: linear-gradient(135deg, #2AFADF 0%, #4C83FF 100%);
+}
+
+.textAnimasiWarna6{
+    background: linear-gradient(135deg, #FFF720 0%, #3CD500 100%);
+}
+
+.textAnimasiWarna7{
+    background: linear-gradient(135deg, #3C8CE7 0%, #00EAFF 100%);
+}
+
+.textAnimasiWarna8{
+    background: linear-gradient(135deg, #FFF886 0%, #F072B6 100%);
+}
+
+.textAnimasiWarna9{
+    background: linear-gradient(135deg, #2AFADF 0%, #4C83FF 100%);
+}
+
+.textWebKit{
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+/**
+    Styling Cnt 6
+*/
 
 
 /* Pengturan container animasi */

@@ -1,51 +1,93 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>
-            Example Text Slide Animasi
-        </title>
+        <title>Contoh Penggunaan animasiTextSlide.js</title>
         <link href="css/animasiTextSlide.css" rel="stylesheet" type="text/css">
         <script src="js/animasiTextSlide.js"></script>
     </head>
     <body>
-        <div class="containerAnimasi">
-            <div class="textAnimasi textAnimasiWarna2 textWebKit">Satu</div>
-            <div class="textAnimasi textAnimasiWarna2 textWebKit">Dua</div>
-            <div class="textAnimasi textAnimasiWarna2 textWebKit">TIga</div>
-            <div class="textAnimasi textAnimasiWarna2 textWebKit">Empat</div>
-            <div class="textAnimasi textAnimasiWarna2 textWebKit">Lima</div>
-            <div class="textAnimasi textAnimasiWarna2 textWebKit">Enam</div>
-            <div class="textAnimasi textAnimasiWarna2 textWebKit">Tujuh</div>
-            <div class="textAnimasi textAnimasiWarna2 textWebKit">Delapan</div>
+
+        <div class="cTextContoh">
+            <h3>Contoh 1</h3>
+            ini adalah contoh
+            <div class="containerAnimasi cnt1">
+                <div class="textAnimasi">Contoh 1</div>
+                <div class="textAnimasi">Contoh 2</div>
+                <div class="textAnimasi">Contoh 3</div>
+                <div class="textAnimasi">Contoh 4</div>
+            </div>
+            penggunaan animasiTextSlide.js yang berada di antara text paragraf, kamu dapat meliahat refrensi styling pada file animasiTextSlide.css, 
+            silahkan set height containerAnimasi Menjadi 0px utuk menentukan ukuran otamtis,
+            <div class="containerAnimasi cnt2">
+                <div class="textAnimasi">Selamat</div>
+                <div class="textAnimasi">Mencoba</div>
+                <div class="textAnimasi">Happy Coding</div>
+            </div>
+
+            <h3>Contoh 2</h3>
+            <div class="containerAnimasi cnt3">
+                <div class="textAnimasi">Ini Adalah Contoh Kedua</div>
+                <div class="textAnimasi">Dia Sendirian disini</div>
+                <div class="textAnimasi">Untuk refrensi styling kamu dapat lihat di</div>
+                <div class="textAnimasi">animasiTextSlide.css class cnt3</div>
+            </div>
+
+            <h3>Contoh 3</h3>
+            <div class="containerAnimasi cnt4">
+                <div class="textAnimasi">Ini Adalah Contoh Ketiga</div>
+                <div class="textAnimasi">Dia Sendirian disini</div>
+                <div class="textAnimasi">Untuk refrensi styling kamu dapat lihat di</div>
+                <div class="textAnimasi">animasiTextSlide.css class cnt4</div>
+            </div>
+
+            <h3>Contoh 4</h3>
+            <div class="containerAnimasi cnt5">
+                <div class="textAnimasi bgIm1">Ini Adalah Contoh Keempat</div>
+                <div class="textAnimasi bgIm2">Dia Sendirian disini</div>
+                <div class="textAnimasi bgIm3">Untuk refrensi styling kamu dapat lihat di</div>
+                <div class="textAnimasi bgIm4">animasiTextSlide.css class cnt5</div>
+            </div>
         </div>
-        <div class="containerAnimasi">
-            <div class="textAnimasi textAnimasiWarna2 textWebKit">Satu</div>
-            <div class="textAnimasi textAnimasiWarna2 textWebKit">Dua</div>
-            <div class="textAnimasi textAnimasiWarna2 textWebKit">TIga</div>
-            <div class="textAnimasi textAnimasiWarna2 textWebKit">Empat</div>
-            <div class="textAnimasi textAnimasiWarna2 textWebKit">Lima</div>
-            <div class="textAnimasi textAnimasiWarna2 textWebKit">Enam</div>
-            <div class="textAnimasi textAnimasiWarna2 textWebKit">Tujuh</div>
-            <div class="textAnimasi textAnimasiWarna2 textWebKit">Delapan</div>
-        </div>
+
         <script>
             
-              animasiTextSlide({
-                animasi1 : {
-                    durasiDiam    : 1,
-                    durasiKembali : 3,
-                    durasiScroll  : 1,
-                    ulangi        : true,
-                    mulaiDari     : 'atasKeBawah'
-                },
-                animasi2 : {
-                    durasiDiam    : 1,
-                    durasiKembali : 3,
-                    durasiScroll  : 1,
-                    ulangi        : true,
-                    mulaiDari     : 'bawahKeAtas'
-                }
-             });
+            animasiTextSlide({
+              animasi1 : {
+                  durasiDiam    : 1,
+                  durasiKembali : 2,
+                  durasiScroll  : 1,
+                  ulangi        : true,
+                  mulaiDari     : 'atasKeBawah'
+              },
+              animasi2 : {
+                  durasiDiam    : 1,
+                  durasiKembali : 2,
+                  durasiScroll  : 1,
+                  ulangi        : true,
+                  mulaiDari     : 'bawahKeAtas'
+              },
+              animasi3 : {
+                  durasiDiam    : 2,
+                  durasiKembali : 2,
+                  durasiScroll  : 3,
+                  ulangi        : true,
+                  mulaiDari     : 'atasKeBawah'
+              },
+              animasi4 : {
+                  durasiDiam    : 2,
+                  durasiKembali : 2,
+                  durasiScroll  : 5,
+                  ulangi        : true,
+                  mulaiDari     : 'bawahKeAtas'
+              },
+              animasi5 : {
+                  durasiDiam    : 3,
+                  durasiKembali : 5,
+                  durasiScroll  : 2,
+                  ulangi        : true,
+                  mulaiDari     : 'atasKeBawah'
+              }
+           });
 
         </script>
     </body>

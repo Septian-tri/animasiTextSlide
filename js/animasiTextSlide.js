@@ -213,8 +213,7 @@ function animasiTextSlide(opsi){
                                                     
                                                     if(objSiglAnimasi[iterasiA].offsetTop >= objI.offsetTop && iterasiA >= 1){
     
-                                                        if(stsDp === false){     
-                                                        
+                                                        if(stsDp === false){   
                                                             iterasiA--;
                                                             
                                                             stsDp        = true;
@@ -389,7 +388,7 @@ function animasiTextSlide(opsi){
                                             }, durasiScroll);
                                         
                                         }else{
-                                            
+
                                             ct(timeoutScrollKeBawah2);
                                             ct(timeOutIdle2);
                                             

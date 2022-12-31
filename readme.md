@@ -5,7 +5,7 @@ animasiTextSlide.js adalah plugin yang di gunakan untuk memberikan efek scrollin
 
 # Repository animasiTextSlide.js
 
-Untuk pemasangan animasi animasiTextSlide.js silahkan unduh paket plugin melalui alamat surel berikut [animasiTextSlide.js](https://github.com/Septian-tri/animasiTextSlide.git)
+Untuk pemasangan animasi animasiTextSlide.js silahkan unduh paket plugin melalui alamat surel berikut [animasiTextSlide.js](https://github.com/Septian-tri/animasiTextSlide/archive/refs/heads/main.zip)
 
 # Pemasang animasiTextSlide.js
 

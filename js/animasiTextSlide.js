@@ -102,6 +102,7 @@ function animasiTextSlide(opsi){
                         if(opsiAnimasi.mulaiDari === 'bawahKeAtas'){
 
                             var posisiIdle     = (function posisiIdleF(){
+                            var objiPad1       = (spx(gCss(objI, pb))+spx(gCss(objI, pt)));
 
                                 if(iterasiA <= (totalChCntAnim-1)){
     
@@ -119,7 +120,7 @@ function animasiTextSlide(opsi){
                                         var delPb1     = spx(gCss(itaA2, pb));
                                         var itaA1Ofhg  = ((osh(itaA1)-(delPt+delPb))/2);
                                         var itaA2Ofhg  = ((osh(itaA2)-(delPt1+delPb1))/2);
-                                        var objISet1   = (osh(objI)/2);
+                                        var objISet1   = ((osh(objI)-objiPad1)/2);
                                         var padPosisi1 = ((objISet1-itaA1Ofhg) < 0) ? 0 : (objISet1-itaA1Ofhg);
                                         var padPosisi2 = ((objISet1-itaA2Ofhg) < 0) ? 0 : (objISet1-itaA2Ofhg);
     
@@ -140,7 +141,7 @@ function animasiTextSlide(opsi){
                                             var delPt3     = spx(gCss(itaA3, pt));
                                             var delPb3     = spx(gCss(itaA3, pb));
                                             var itaA3Ofhg  = ((osh(itaA3)-(delPb3+delPt3))/2);
-                                            var objISet2   = (osh(objI)/2);
+                                            var objISet2   = ((osh(objI)-objiPad1)/2);
                                             var padPosisi3 = ((objISet2-itaA3Ofhg) < 0 ) ? 0 : (objISet2-itaA3Ofhg);
     
                                             itaA3.style.cssText = pt + ': ' + padPosisi3 + 'px; '+ pb +': ' + padPosisi3 + 'px;';
@@ -256,7 +257,9 @@ function animasiTextSlide(opsi){
                         }else if(opsiAnimasi.mulaiDari === 'atasKeBawah'){
 
                             var atasKeBawah = (function atasKeBawahF(){
-                              
+                                
+                                var objiPad2 = (spx(gCss(objI, pb))+spx(gCss(objI, pt)));
+
                                 if(iterasiB < totalChCntAnim){
 
                                     if(iterasiB <= 1){ //set ukuran animasi pase 1
@@ -273,7 +276,7 @@ function animasiTextSlide(opsi){
                                         var delPb5     = spx(gCss(itaB2, pb));
                                         var itaB1Ofhg  = ((osh(itaB1)-(delPt4+delPb4))/2);
                                         var itaB2Ofhg  = ((osh(itaB2)-(delPt5+delPb5))/2);
-                                        var objISet2   = (osh(objI)/2);
+                                        var objISet2   = ((osh(objI)-objiPad2)/2);
                                         var padPosisi4 = ((objISet2-itaB1Ofhg) < 0) ? 0 : (objISet2-itaB1Ofhg);
                                         var padPosisi5 = ((objISet2-itaB2Ofhg) < 0) ? 0 : (objISet2-itaB2Ofhg);
 
@@ -292,7 +295,7 @@ function animasiTextSlide(opsi){
                                         var delPt6      = spx(gCss(itaB3, pt));
                                         var delPb6      = spx(gCss(itaB3, pb));
                                         var itaB3Ofhg   = ((osh(itaB3)-(delPt6+delPb6))/2);
-                                        var calcPadPos6 = (osh(objI)/2)-(itaB3Ofhg);
+                                        var calcPadPos6 = ((osh(objI)-objiPad2)/2)-(itaB3Ofhg);
                                         var padPosisi6  = (calcPadPos6 < 0) ? 0 : calcPadPos6;
 
                                         itaB3.style.cssText = pt + ': ' + padPosisi6 + 'px; ' + pb + ': ' + padPosisi6 + 'px; ';

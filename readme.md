@@ -1,6 +1,6 @@
 # Simple Plugin Animasi Text Slide Untuk Javascript
 
-animasiTextSlide.js adalah plugin yang di gunakan untuk memberikan efek scrolling pada text yang terdapat di dalam sebuah class container, animasiTextSlide.js menggunakan Javascript untuk melakukan manipulasi DOM, dan animasi animasiTextSlide.js juga meliliki performa yang baik di setiap perangkat
+animasiTextSlide.js adalah plugin yang di gunakan untuk memberikan efek scrolling pada text yang terdapat di dalam sebuah class container, animasiTextSlide.js menggunakan Javascript untuk melakukan manipulasi DOM, dan animasi animasiTextSlide.js juga meliliki performa yang baik di setiap perangkat, Untuk demo plugin silahkan [klik tautan ini](https://septian-tri.github.io/pluginPage/example.html)
 
 
 # Repository animasiTextSlide.js

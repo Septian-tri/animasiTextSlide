@@ -15,8 +15,6 @@
 
 function animasiTextSlide(opsi){
 
-    window.onload = function(e){
-
         function obj(obj){
             var cekSelector = obj.match(/^(\#|\.)([a-zA-Z0-9\-\_]*)$/);
             
@@ -323,7 +321,7 @@ function animasiTextSlide(opsi){
 
                                     var normalPosisi2    = (function normalPosisi2F(){
 
-                                         if((iterasiB-1) >= 1){
+                                        if((iterasiB-1) >= 1){
                                             
                                             var objAnimasi2         = objSiglAnimasi[0];
                                             var posisiOutFrameAtas  = ((iterasiB-1) <= 0) ? 0 : (0-osh(objAnimasi2));
@@ -445,7 +443,5 @@ function animasiTextSlide(opsi){
             }
 
         }
-
-    }
-
+        
 }
